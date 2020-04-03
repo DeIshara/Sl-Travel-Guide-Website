@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Select Travel </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		body{
+			
+			background-image: url("select.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-color: ;
+			padding:0px 10px;
+			
+		}	
+			
+		
+		h1{
+			background-color: #cc0099;
+			padding: 15px;
+		}	
+
+		
+		a{
+			padding:0px 10px;
+			font-size: 22px;
+		}
+		a:hover{
+			background-color: #e60000;
+		}
+		*{
+			box-sizing:border-box;
+		}
+		.divdetailsrow{
+			background-color: #99ff33;
+			padding:10px;
+			
+		}
+		.divdetailsrow:after {
+			content:"";
+			display:table;
+			clear:both;
+
+		}
+		.divdetailscolumn{
+			float:left;
+			width:33.33%;
+			padding-left:104px;
+			padding-top: 0px;
+			padding-bottom: 10px;
+			height:180px;
+			background-color: #c3ffb3;
+		}
+		
+		
+
+	</style>
+	<script type="text/javascript">
+		function calcdistance(){
+			var distance=0;
+			var trip=document.getElementById("selectdropdown").value;
+			if(trip=="Beruwala"){
+				distance="74km (1 h 40 min)";
+			}
+			else if(trip=="Hikkaduwa"){
+				distance="117km (1 h 58 min)";
+			}
+			else if(trip=="Trinco"){
+				distance="266km (5 h 37 min)";
+			}
+			else if(trip=="Kandy"){
+				distance="116km (3 h 30 min)";
+			}
+			else if(trip=="Alla"){
+				distance="232km (5 h 33 min)";
+			}
+			document.getElementById("spantrip").innerHTML=trip;
+			document.getElementById("spanvalue").innerHTML=distance;
+			document.getElementById("Spantrip").innerHTML=trip;
+			document.getElementById("Spanvalue").innerHTML=distance;
+		}
+		
+
+
+	</script>
+</head>
+<body >
+	
+		<h1 >Select A Trip & Submit A Request Form</h1>
+	
+	<div class="selectdivlink">
+		<a href="menu.htm" class="firstlink">Menu</a>
+		<a href="firstpage.htm" class="firstlink">First Page</a>
+	</div>
+	
+	<div class=" selectdivpara">	
+		<p>What is your favourite trip? <br>Select a trip and choose a transport media and submit below form to us.<br>Then,Quikly you get our contact support service and then they guide you.<br>Enjoy Very Well.<br>Thank You!</p>
+		</div>	
+	
+	<form >
+		<select name="dropdown" id="selectdropdown" style="font-size: 17px">
+			<option value="Beruwala" selected>Beruwala</option>
+			<option value="Hikkaduwa">Hikkaduwa</option>
+			<option value="Trinco">Trincomalee</option>
+			<option value="Kandy">Kandy</option>
+			<option value="Alla">Alla</option>
+			
+		</select>
+	
+	&nbsp&nbsp&nbsp<input type="button" onclick="calcdistance()" value="Distance"style="font-size: 17px"/>
+	</form>
+	<p style="font-size: 23px; color: blue; ">Distance & Time from Colombo to <span id="spantrip"></span> = <span id="spanvalue"></span></p>
+	<h2>You can get transport details using below contacts.</h2> 
+<div class="divdetailsrow">
+
+
+	<div class="divdetailscolumn">
+		<h3>Car contacts</h3>
+		<ul style="font-size: 18px">
+			<li>071-9652489 - Kumara</li>
+			<li>076-9872463 - Jayashan</li>
+			<li>071-2236478 - Amitha</li>
+			<li>078-9223889 - Ishara</li>
+			<li>076-2682489 - Uditha</li>
+		</ul>
+	</div>
+
+	
+	<div class="divdetailscolumn">
+		<h3>Van contacts</h3>
+		<ul style="font-size: 18px">
+			<li>071-4126489 - Namal</li>
+			<li>076-9822563 - Krishan</li>
+			<li>071-486678 -  Uddika</li>
+			<li>078-9639889 - Ajith</li>
+			<li>076-2685589 - Prakep</li>
+		</ul>
+		
+	</div>
+
+
+	<div class="divdetailscolumn">
+		<h3>Bus contacts</h3>
+		<ul style="font-size: 18px">
+			<li>071-9669489 - Arjun</li>
+			<li>076-3698463 - Ahamad</li>
+			<li>071-2256848 - Hafeeze</li>
+			<li>078-9222589 - Janedran</li>
+			<li>076-2823489 - Thusitha</li>
+		</ul>
+		
+	</div>
+
+</div>
+	<form  style="font-size: 18px">
+		<h3>Submit details about your trip.</h3>
+		Name : <input type="text" name="name" value=""/><br>
+		Address:<br>
+		<input type="text" name="address" value=""/><br>
+		<p style="color:blue;">Selected Trip : <span id="Spantrip"></span> Distance : <span id="Spanvalue"></span></p>
+		Contact Number : <br>
+		<input type="number" name="number"/><br>
+		Email : <br>
+		<input type="email" name="email"/><br>
+		Trip details : <br>
+		<textarea rows="4" cols="80"></textarea><br>		
+		<input type="submit" name="submit" onclick="alert('Your Details Successfully Submitted. THANK YOU!') " style="font-size: 18px"/>
+
+
+
+	</form>
+	
+	
+
+</body>
+</html>	
